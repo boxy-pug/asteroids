@@ -45,6 +45,10 @@ def main():
             if droid.is_collision(player):
                 print("Game over!")
                 sys.exit()
+            for shot in shots:
+                if droid.is_collision(shot):
+                    droid.kill()
+                    shot.kill()
 
         for object in drawable:
             object.draw(screen)
