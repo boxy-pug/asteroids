@@ -47,7 +47,7 @@ def main():
                 sys.exit()
             for shot in shots:
                 if droid.is_collision(shot):
-                    droid.kill()
+                    droid.split()
                     shot.kill()
 
         for object in drawable:
